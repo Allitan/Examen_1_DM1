@@ -2,6 +2,7 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import PantallaInicio from '../Pages/PantallaInicio/PantallaInicio';
+import { NavigationContainer } from '@react-navigation/native';
 import PantallaTransferencias from '../Pages/PantallaTransferencias/PantallaTransferencias';
 
 export default function BottonTabNavegacion() {
