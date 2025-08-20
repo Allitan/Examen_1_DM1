@@ -30,7 +30,7 @@ export default function ProviderBanco({children}: ProviderBancoProps) {
     agregarTransaccion({tipo: 'Deposito', monto})
   }
 
-  const transferir = (monto: number, destinatario: string)=>{
+  const transferir = (monto: number, destinatario: string): boolean=>{
     if(monto<=saldo){
       setSaldo(prevSaldo => prevSaldo - monto);
       agregarTransaccion({tipo: 'Transferencia', monto, destinatario})

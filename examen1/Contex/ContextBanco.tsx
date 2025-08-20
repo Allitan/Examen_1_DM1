@@ -5,7 +5,7 @@ export interface IBancoContext{
     saldo: number;
     transacciones: Transaccion[];
     depositar: (monto: number) => void;
-    transferir: (monto: number, destinatario: string)=> void;
+    transferir: (monto: number, destinatario: string)=> boolean;
     obtenerConteoTRansacciones: () => number;
 }
 
@@ -13,7 +13,7 @@ export const ContextBanco= createContext<IBancoContext>({
     saldo: 0,
     transacciones: [],
     depositar: () => {},
-    transferir: () => {},
+    transferir: () => false,
     obtenerConteoTRansacciones: () => 0
 })
 
